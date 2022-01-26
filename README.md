@@ -13,8 +13,10 @@
 <br>php artisan storage:link (для файлов Laravel ссылки в папку public)
 </p>
 
-<h3></h3>
-<p>
-<br> 
-<br>
+<h3>v1.0 arm</h3>
+<p> npm i @emotion/react @emotion/styled @mui/icons-material @mui/lab @mui/material @mui/styles // установка material ui
+<br> npm i mobx mobx-react-lite yup // установка state manager mobx 
+<br> Добавлен роутинг и некоторые компоненты в приложение
 </p>
+
+

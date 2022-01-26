@@ -1,0 +1,28 @@
+.modall {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  display: none;
+  transition: .2s;
+  pointer-events: none;
+  .modall-content {
+    padding: 15px;
+    background-color: #fff;
+    max-width: 100%;
+    z-index: 10000;
+  }
+} 
+.modall.active {
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 100%;
+  pointer-events: all;
+  z-index: 1000;
+} 
+
