@@ -1,233 +1,4 @@
 @import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto&display=swap);
-.honey {
-  background-color: pink;
-  padding: 15px 0px;
-}
-
-.hexGrid {
-  display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
-  font-size: 15px;
-  margin-left: 8px;
-}
-
-.hex {
-  position: relative;
-  visibility: hidden;
-  outline: 1px solid transparent;
-  /* fix for jagged edges in FF on hover transition */
-}
-.hex:after {
-  content: "";
-  display: block;
-  padding-bottom: 86.602%;
-  /* =  100 / tan(60) * 1.5 */
-}
-.hex img {
-  left: -100%;
-  right: -100%;
-  width: auto;
-  height: 100%;
-  margin: 0 auto;
-  transform: rotate3d(0, 0, 0, 0deg);
-}
-.hex span, .hex p {
-  width: 100%;
-  padding: 5%;
-  box-sizing: border-box;
-  background-color: pink;
-  font-weight: 300;
-  transition: transform 0.2s ease-out, opacity 0.3s ease-out;
-}
-.hex span {
-  bottom: 50%;
-  padding-top: 50%;
-  font-size: 1.5em;
-  z-index: 1;
-  transform: translate3d(0, -100%, 0);
-  display: block;
-}
-.hex span:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 45%;
-  width: 10%;
-  text-align: center;
-  border-bottom: 1px solid #fff;
-}
-.hex p {
-  top: 50%;
-  padding-bottom: 50%;
-  transform: translate3d(0, 100%, 0);
-}
-
-.hexIn {
-  position: absolute;
-  width: 95.8%;
-  padding-bottom: 110.851%;
-  /* =  width / sin(60) */
-  margin: 0 2%;
-  overflow: hidden;
-  visibility: hidden;
-  outline: 1px solid transparent;
-  /* fix for jagged edges in FF on hover transition */
-  transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
-}
-
-.hexIn * {
-  position: absolute;
-  visibility: visible;
-  outline: 1px solid transparent;
-  /* fix for jagged edges in FF on hover transition */
-}
-
-.hexLink {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  color: #fff;
-  overflow: hidden;
-  transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
-}
-
-/*** HEX CONTENT **********************************************************************/
-.hex p {
-  top: 50%;
-  padding-bottom: 50%;
-  transform: translate3d(0, 100%, 0);
-}
-
-/*** HOVER EFFECT  **********************************************************************/
-.hexLink:hover span, .hexLink:focus span,
-.hexLink:hover p, .hexLink:focus p {
-  transform: translate3d(0, 0, 0);
-}
-
-/*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
-@media (min-width: 1201px) {
-  /* <- 5-4  hexagons per row */
-  .hexGrid {
-    padding-bottom: 4.4%;
-  }
-
-  .hex {
-    width: 16.6%;
-    /* = 100 / 6 */
-  }
-
-  .hex:nth-child(11n+7) {
-    /* first hexagon of even rows */
-    margin-left: 8.3%;
-    /* = width of .hex / 2  to indent even rows */
-  }
-}
-@media (max-width: 1200px) and (min-width: 901px) {
-  /* <- 4-3  hexagons per row */
-  .hexGrid {
-    padding-bottom: 5.5%;
-  }
-
-  .hex {
-    width: 25%;
-    /* = 100 / 4 */
-  }
-
-  .hex:nth-child(7n+5) {
-    /* first hexagon of even rows */
-    margin-left: 12.5%;
-    /* = width of .hex / 2  to indent even rows */
-  }
-}
-@media (max-width: 900px) and (min-width: 601px) {
-  /* <- 3-2  hexagons per row */
-  .hexGrid {
-    padding-bottom: 7.4%;
-  }
-
-  .hex {
-    width: 33.333%;
-    /* = 100 / 3 */
-  }
-
-  .hex:nth-child(5n+4) {
-    /* first hexagon of even rows */
-    margin-left: 16.666%;
-    /* = width of .hex / 2  to indent even rows */
-  }
-}
-@media (max-width: 600px) {
-  /* <- 2-1  hexagons per row */
-  .hexGrid {
-    padding-bottom: 11.2%;
-  }
-
-  .hex {
-    width: 50%;
-    /* = 100 / 2 */
-  }
-
-  .hex:nth-child(3n+3) {
-    /* first hexagon of even rows */
-    margin-left: 25%;
-    /* = width of .hex / 2  to indent even rows */
-  }
-}
-@media (max-width: 400px) {
-  .hexGrid {
-    font-size: 13px;
-  }
-}
-.modall {
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
-  position: fixed;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  display: none;
-  transition: 0.2s;
-  pointer-events: none;
-}
-.modall .modall-content {
-  padding: 15px;
-  background-color: #fff;
-  max-width: 100%;
-  z-index: 10000;
-}
-
-.modall.active {
-  opacity: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  pointer-events: all;
-  z-index: 1000;
-}
-
-.footer {
-  padding: 7em 0;
-  font-size: 14px;
-}
-
-.footer-container {
-  max-width: 1140px;
-  margin: 0 200px;
-}
-
-.footer-row {
-  display: flex;
-  margin: 0 auto;
-}
-
-.footer-column {
-  display: flex;
-}
-
 *, *:before, *:after {
   padding: 0;
   margin: 0;
@@ -289,45 +60,149 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Quicksand", sans-serif;
 }
 
-.light {
-  -webkit-animation: lighter 0.2s forwards ease-in-out;
-          animation: lighter 0.2s forwards ease-in-out;
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
-.dark {
-  -webkit-animation: darker 0.2s forwards ease-in-out;
-          animation: darker 0.2s forwards ease-in-out;
-}
-
-@-webkit-keyframes darker {
-  to {
-    background-color: black;
-    color: white;
-  }
-}
-
-@keyframes darker {
-  to {
-    background-color: black;
-    color: white;
-  }
-}
-@-webkit-keyframes lighter {
-  to {
-    background-color: white;
-    color: black;
-  }
-}
-@keyframes lighter {
-  to {
-    background-color: white;
-    color: black;
-  }
-}
 ::-webkit-scrollbar {
   width: 4px;
 }
 
 ::-webkit-scrollbar-track {
   background: tomato;
+}
+
+.honey {
+  --s: 250px;
+  /* size  */
+  --m: 4px;
+  /* margin */
+  --f: calc(1.732 * var(--s) + 4 * var(--m) - 1px);
+  background-color: #3a3939;
+}
+.honey_inner {
+  display: flex;
+  justify-content: center;
+  max-width: 1550px;
+  padding: 25px 0px 100px;
+  margin: 0 auto;
+}
+
+.honey_combs {
+  font-size: 0;
+  /*disable white space between inline block element */
+}
+.honey_combs::before {
+  content: "";
+  width: calc(var(--s) / 2 + var(--m));
+  float: left;
+  height: 120%;
+  shape-outside: repeating-linear-gradient(#0000 0 calc(var(--f) - 3px), #000 0 var(--f));
+}
+.honey_combs .comb {
+  position: relative;
+  width: var(--s);
+  margin: var(--m);
+  height: calc(var(--s) * 1.1547);
+  display: inline-block;
+  font-size: initial;
+  -webkit-clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+          clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+  background-color: #00d9ff;
+  margin-bottom: calc(var(--m) - var(--s) * 0.2885);
+  transition: transform 0.1s;
+  padding: 15px;
+  background: no-repeat center;
+}
+.honey_combs .comb:hover {
+  transform: scale(1.07);
+}
+.honey_combs .comb img {
+  width: 100%;
+  height: 100%;
+}
+.honey_combs .comb .comb_link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.modall {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  display: none;
+  transition: 0.2s;
+  pointer-events: none;
+}
+.modall .modall-content {
+  padding: 15px;
+  background-color: #fff;
+  max-width: 100%;
+  z-index: 10000;
+}
+
+.modall.active {
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  pointer-events: all;
+  z-index: 1000;
+}
+
+header {
+  padding: 15px;
+  height: 80px;
+  font-family: "Roboto", sans-serif;
+  border-bottom: 1px solid #dadada;
+}
+header .header_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header_inner .header_logo img {
+  width: 150px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .header_inner .header_nav ul {
+  display: flex;
+  align-items: center;
+  margin: 0px -10px;
+}
+header .header_inner .header_nav ul li {
+  padding: 0px 10px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+header .header_inner .header_nav ul li:hover {
+  color: #00d9ff;
+}
+header .header_inner .header_settings {
+  display: grid;
+  place-items: center;
+}
+
+@media screen and (max-width: 700px) {
+  header .header_inner .header_nav ul {
+    display: none;
+  }
 }

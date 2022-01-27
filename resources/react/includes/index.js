@@ -1,5 +1,5 @@
-import Honey from "./Main/Honey";
+import HoneyCombs from "./Main/HoneyCombs"
 
 export {
-  Honey
+  HoneyCombs
 }

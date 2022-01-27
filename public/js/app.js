@@ -2216,6 +2216,290 @@ const backdropUnstyledClasses = (0,_generateUtilityClasses__WEBPACK_IMPORTED_MOD
 
 /***/ }),
 
+/***/ "./node_modules/@mui/base/BadgeUnstyled/BadgeUnstyled.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@mui/base/BadgeUnstyled/BadgeUnstyled.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/utils */ "./node_modules/@mui/utils/esm/capitalize.js");
+/* harmony import */ var _composeClasses__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../composeClasses */ "./node_modules/@mui/base/composeClasses/composeClasses.js");
+/* harmony import */ var _utils_appendOwnerState__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../utils/appendOwnerState */ "./node_modules/@mui/base/utils/appendOwnerState.js");
+/* harmony import */ var _useBadge__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./useBadge */ "./node_modules/@mui/base/BadgeUnstyled/useBadge.js");
+/* harmony import */ var _badgeUnstyledClasses__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./badgeUnstyledClasses */ "./node_modules/@mui/base/BadgeUnstyled/badgeUnstyledClasses.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+const _excluded = ["anchorOrigin", "classes", "badgeContent", "component", "children", "className", "components", "componentsProps", "invisible", "max", "showZero", "variant"];
+
+
+
+
+
+
+
+
+
+
+
+const useUtilityClasses = ownerState => {
+  const {
+    variant,
+    anchorOrigin,
+    invisible,
+    classes
+  } = ownerState;
+  const slots = {
+    root: ['root'],
+    badge: ['badge', variant, `anchorOrigin${(0,_mui_utils__WEBPACK_IMPORTED_MODULE_5__["default"])(anchorOrigin.vertical)}${(0,_mui_utils__WEBPACK_IMPORTED_MODULE_5__["default"])(anchorOrigin.horizontal)}`, invisible && 'invisible']
+  };
+  return (0,_composeClasses__WEBPACK_IMPORTED_MODULE_6__["default"])(slots, _badgeUnstyledClasses__WEBPACK_IMPORTED_MODULE_7__.getBadgeUtilityClass, classes);
+};
+
+const BadgeUnstyled = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(function BadgeUnstyled(props, ref) {
+  const {
+    anchorOrigin: anchorOriginProp = {
+      vertical: 'top',
+      horizontal: 'right'
+    },
+    classes: classesProp,
+    component,
+    children,
+    className,
+    components = {},
+    componentsProps = {},
+    max: maxProp = 99,
+    showZero = false,
+    variant: variantProp = 'standard'
+  } = props,
+        other = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(props, _excluded);
+
+  const {
+    anchorOrigin,
+    badgeContent,
+    max,
+    variant,
+    displayValue,
+    invisible
+  } = (0,_useBadge__WEBPACK_IMPORTED_MODULE_8__["default"])((0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    anchorOrigin: anchorOriginProp,
+    max: maxProp,
+    variant: variantProp
+  }));
+
+  const ownerState = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    anchorOrigin,
+    badgeContent,
+    classes: classesProp,
+    invisible,
+    max,
+    variant,
+    showZero
+  });
+
+  const classes = useUtilityClasses(ownerState);
+  const Root = component || components.Root || 'span';
+  const rootProps = (0,_utils_appendOwnerState__WEBPACK_IMPORTED_MODULE_9__["default"])(Root, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, other, componentsProps.root), ownerState);
+  const Badge = components.Badge || 'span';
+  const badgeProps = (0,_utils_appendOwnerState__WEBPACK_IMPORTED_MODULE_9__["default"])(Badge, componentsProps.badge, ownerState);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(Root, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, rootProps, {
+    ref: ref
+  }, other, {
+    className: (0,clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(classes.root, rootProps.className, className),
+    children: [children, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Badge, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, badgeProps, {
+      className: (0,clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(classes.badge, badgeProps.className),
+      children: displayValue
+    }))]
+  }));
+});
+ true ? BadgeUnstyled.propTypes
+/* remove-proptypes */
+= {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+
+  /**
+   * The anchor of the badge.
+   * @default {
+   *   vertical: 'top',
+   *   horizontal: 'right',
+   * }
+   */
+  anchorOrigin: prop_types__WEBPACK_IMPORTED_MODULE_10___default().shape({
+    horizontal: prop_types__WEBPACK_IMPORTED_MODULE_10___default().oneOf(['left', 'right']).isRequired,
+    vertical: prop_types__WEBPACK_IMPORTED_MODULE_10___default().oneOf(['bottom', 'top']).isRequired
+  }),
+
+  /**
+   * The content rendered within the badge.
+   */
+  badgeContent: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().node),
+
+  /**
+   * The badge will be added relative to this node.
+   */
+  children: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().node),
+
+  /**
+   * Override or extend the styles applied to the component.
+   */
+  classes: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().object),
+
+  /**
+   * @ignore
+   */
+  className: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().string),
+
+  /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().elementType),
+
+  /**
+   * The components used for each slot inside the Badge.
+   * Either a string to use a HTML element or a component.
+   * @default {}
+   */
+  components: prop_types__WEBPACK_IMPORTED_MODULE_10___default().shape({
+    Badge: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().elementType),
+    Root: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().elementType)
+  }),
+
+  /**
+   * The props used for each slot inside the Badge.
+   * @default {}
+   */
+  componentsProps: prop_types__WEBPACK_IMPORTED_MODULE_10___default().shape({
+    badge: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().object),
+    root: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().object)
+  }),
+
+  /**
+   * If `true`, the badge is invisible.
+   */
+  invisible: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().bool),
+
+  /**
+   * Max count to show.
+   * @default 99
+   */
+  max: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().number),
+
+  /**
+   * Controls whether the badge is hidden when `badgeContent` is zero.
+   * @default false
+   */
+  showZero: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().bool),
+
+  /**
+   * The variant to use.
+   * @default 'standard'
+   */
+  variant: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().string)
+} : 0;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BadgeUnstyled);
+
+/***/ }),
+
+/***/ "./node_modules/@mui/base/BadgeUnstyled/badgeUnstyledClasses.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@mui/base/BadgeUnstyled/badgeUnstyledClasses.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getBadgeUtilityClass": () => (/* binding */ getBadgeUtilityClass),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _generateUtilityClasses__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../generateUtilityClasses */ "./node_modules/@mui/base/generateUtilityClasses/generateUtilityClasses.js");
+/* harmony import */ var _generateUtilityClass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../generateUtilityClass */ "./node_modules/@mui/base/generateUtilityClass/generateUtilityClass.js");
+
+
+function getBadgeUtilityClass(slot) {
+  return (0,_generateUtilityClass__WEBPACK_IMPORTED_MODULE_0__["default"])('MuiBadge', slot);
+}
+const badgeUnstyledClasses = (0,_generateUtilityClasses__WEBPACK_IMPORTED_MODULE_1__["default"])('MuiBadge', ['root', 'badge', 'dot', 'standard', 'anchorOriginTopLeft', 'anchorOriginTopRight', 'anchorOriginBottomLeft', 'anchorOriginBottomRight', 'invisible']);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (badgeUnstyledClasses);
+
+/***/ }),
+
+/***/ "./node_modules/@mui/base/BadgeUnstyled/useBadge.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@mui/base/BadgeUnstyled/useBadge.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ useBadge)
+/* harmony export */ });
+/* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @mui/utils */ "./node_modules/@mui/utils/esm/usePreviousProps.js");
+
+function useBadge(props) {
+  const {
+    anchorOrigin: anchorOriginProp = {
+      vertical: 'top',
+      horizontal: 'right'
+    },
+    badgeContent: badgeContentProp,
+    invisible: invisibleProp,
+    max: maxProp = 99,
+    showZero = false,
+    variant: variantProp = 'standard'
+  } = props;
+  const prevProps = (0,_mui_utils__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    anchorOrigin: anchorOriginProp,
+    badgeContent: badgeContentProp,
+    max: maxProp,
+    variant: variantProp
+  });
+  let invisible = invisibleProp;
+
+  if (invisibleProp == null && (badgeContentProp === 0 && !showZero || badgeContentProp == null && variantProp !== 'dot')) {
+    invisible = true;
+  }
+
+  const {
+    anchorOrigin = anchorOriginProp,
+    badgeContent,
+    max = maxProp,
+    variant = variantProp
+  } = invisible ? prevProps : props;
+  let displayValue = '';
+
+  if (variant !== 'dot') {
+    displayValue = badgeContent && Number(badgeContent) > max ? `${max}+` : badgeContent;
+  }
+
+  return {
+    anchorOrigin,
+    badgeContent,
+    invisible,
+    max,
+    variant,
+    displayValue
+  };
+}
+
+/***/ }),
+
 /***/ "./node_modules/@mui/base/ModalUnstyled/ModalManager.js":
 /*!**************************************************************!*\
   !*** ./node_modules/@mui/base/ModalUnstyled/ModalManager.js ***!
@@ -3805,6 +4089,41 @@ function generateUtilityClasses(componentName, slots) {
 
 /***/ }),
 
+/***/ "./node_modules/@mui/base/utils/appendOwnerState.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@mui/base/utils/appendOwnerState.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ appendOwnerState)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _isHostComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./isHostComponent */ "./node_modules/@mui/base/utils/isHostComponent.js");
+
+
+/**
+ * Appends the ownerState object to the props, merging with the existing one if necessary.
+ *
+ * @param elementType Type of the element that owns the `existingProps`. If the element is a DOM node, `ownerState` are not applied.
+ * @param existingProps Props of the element.
+ * @param ownerState
+ */
+
+function appendOwnerState(elementType, existingProps = {}, ownerState) {
+  if ((0,_isHostComponent__WEBPACK_IMPORTED_MODULE_1__["default"])(elementType)) {
+    return existingProps;
+  }
+
+  return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, existingProps, {
+    ownerState: (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, existingProps.ownerState, ownerState)
+  });
+}
+
+/***/ }),
+
 /***/ "./node_modules/@mui/base/utils/isHostComponent.js":
 /*!*********************************************************!*\
   !*** ./node_modules/@mui/base/utils/isHostComponent.js ***!
@@ -4199,10 +4518,56 @@ const loadingButtonClasses = (0,_mui_base__WEBPACK_IMPORTED_MODULE_1__["default"
 
 /***/ }),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+/***/ "./node_modules/@mui/lab/node_modules/@mui/base/composeClasses/composeClasses.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/@mui/lab/node_modules/@mui/base/composeClasses/composeClasses.js ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ composeClasses)
+/* harmony export */ });
+function composeClasses(slots, getUtilityClass, classes) {
+  const output = {};
+  Object.keys(slots).forEach( // `Objet.keys(slots)` can't be wider than `T` because we infer `T` from `slots`.
+  // @ts-expect-error https://github.com/microsoft/TypeScript/pull/12253#issuecomment-263132208
+  slot => {
+    output[slot] = slots[slot].reduce((acc, key) => {
+      if (key) {
+        if (classes && classes[key]) {
+          acc.push(classes[key]);
+        }
+
+        acc.push(getUtilityClass(key));
+      }
+
+      return acc;
+    }, []).join(' ');
+  });
+  return output;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@mui/lab/node_modules/@mui/base/generateUtilityClass/ClassNameGenerator.js":
+/*!*************************************************************************************************!*\
+  !*** ./node_modules/@mui/lab/node_modules/@mui/base/generateUtilityClass/ClassNameGenerator.js ***!
+  \*************************************************************************************************/
+=======
+>>>>>>> 42923eb (header + footer + honey => honeycombs)
 /***/ "./node_modules/@mui/material/AppBar/AppBar.js":
 /*!*****************************************************!*\
   !*** ./node_modules/@mui/material/AppBar/AppBar.js ***!
   \*****************************************************/
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 42923eb (header + footer + honey => honeycombs)
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4210,6 +4575,88 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const defaultGenerator = componentName => componentName;
+
+const createClassNameGenerator = () => {
+  let generate = defaultGenerator;
+  return {
+    configure(generator) {
+      generate = generator;
+    },
+
+    generate(componentName) {
+      return generate(componentName);
+    },
+
+    reset() {
+      generate = defaultGenerator;
+    }
+
+  };
+};
+
+const ClassNameGenerator = createClassNameGenerator();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ClassNameGenerator);
+
+/***/ }),
+
+/***/ "./node_modules/@mui/lab/node_modules/@mui/base/generateUtilityClass/generateUtilityClass.js":
+/*!***************************************************************************************************!*\
+  !*** ./node_modules/@mui/lab/node_modules/@mui/base/generateUtilityClass/generateUtilityClass.js ***!
+  \***************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ generateUtilityClass)
+/* harmony export */ });
+/* harmony import */ var _ClassNameGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ClassNameGenerator */ "./node_modules/@mui/lab/node_modules/@mui/base/generateUtilityClass/ClassNameGenerator.js");
+
+const globalStateClassesMapping = {
+  active: 'Mui-active',
+  checked: 'Mui-checked',
+  completed: 'Mui-completed',
+  disabled: 'Mui-disabled',
+  error: 'Mui-error',
+  expanded: 'Mui-expanded',
+  focused: 'Mui-focused',
+  focusVisible: 'Mui-focusVisible',
+  required: 'Mui-required',
+  selected: 'Mui-selected'
+};
+function generateUtilityClass(componentName, slot) {
+  const globalStateClass = globalStateClassesMapping[slot];
+  return globalStateClass || `${_ClassNameGenerator__WEBPACK_IMPORTED_MODULE_0__["default"].generate(componentName)}-${slot}`;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@mui/lab/node_modules/@mui/base/generateUtilityClasses/generateUtilityClasses.js":
+/*!*******************************************************************************************************!*\
+  !*** ./node_modules/@mui/lab/node_modules/@mui/base/generateUtilityClasses/generateUtilityClasses.js ***!
+  \*******************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ generateUtilityClasses)
+/* harmony export */ });
+/* harmony import */ var _generateUtilityClass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../generateUtilityClass */ "./node_modules/@mui/lab/node_modules/@mui/base/generateUtilityClass/generateUtilityClass.js");
+
+function generateUtilityClasses(componentName, slots) {
+  const result = {};
+  slots.forEach(slot => {
+    result[slot] = (0,_generateUtilityClass__WEBPACK_IMPORTED_MODULE_0__["default"])(componentName, slot);
+  });
+  return result;
+}
+=======
+>>>>>>> 42923eb (header + footer + honey => honeycombs)
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -4417,6 +4864,7 @@ function getAppBarUtilityClass(slot) {
 }
 const appBarClasses = (0,_mui_base__WEBPACK_IMPORTED_MODULE_1__["default"])('MuiAppBar', ['root', 'positionFixed', 'positionAbsolute', 'positionSticky', 'positionStatic', 'positionRelative', 'colorDefault', 'colorPrimary', 'colorSecondary', 'colorInherit', 'colorTransparent']);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (appBarClasses);
+>>>>>>> origin/main
 
 /***/ }),
 
@@ -4919,6 +5367,372 @@ const Backdrop = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(func
   })])
 } : 0;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Backdrop);
+
+/***/ }),
+
+/***/ "./node_modules/@mui/material/Badge/Badge.js":
+/*!***************************************************!*\
+  !*** ./node_modules/@mui/material/Badge/Badge.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "badgeClasses": () => (/* binding */ badgeClasses),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/utils */ "./node_modules/@mui/utils/esm/usePreviousProps.js");
+/* harmony import */ var _mui_base__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/base */ "./node_modules/@mui/base/generateUtilityClasses/generateUtilityClasses.js");
+/* harmony import */ var _mui_base_BadgeUnstyled__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/base/BadgeUnstyled */ "./node_modules/@mui/base/BadgeUnstyled/badgeUnstyledClasses.js");
+/* harmony import */ var _mui_base_BadgeUnstyled__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/base/BadgeUnstyled */ "./node_modules/@mui/base/BadgeUnstyled/BadgeUnstyled.js");
+/* harmony import */ var _styles_styled__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../styles/styled */ "./node_modules/@mui/material/styles/styled.js");
+/* harmony import */ var _styles_useThemeProps__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../styles/useThemeProps */ "./node_modules/@mui/material/styles/useThemeProps.js");
+/* harmony import */ var _utils_shouldSpreadAdditionalProps__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../utils/shouldSpreadAdditionalProps */ "./node_modules/@mui/material/utils/shouldSpreadAdditionalProps.js");
+/* harmony import */ var _utils_capitalize__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../utils/capitalize */ "./node_modules/@mui/material/utils/capitalize.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+const _excluded = ["anchorOrigin", "component", "components", "componentsProps", "overlap", "color", "invisible", "badgeContent", "showZero", "variant"];
+
+
+
+
+
+
+
+
+
+
+
+const badgeClasses = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, _mui_base_BadgeUnstyled__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_mui_base__WEBPACK_IMPORTED_MODULE_6__["default"])('MuiBadge', ['colorError', 'colorInfo', 'colorPrimary', 'colorSecondary', 'colorSuccess', 'colorWarning', 'overlapRectangular', 'overlapCircular', // TODO: v6 remove the overlap value from these class keys
+'anchorOriginTopLeftCircular', 'anchorOriginTopLeftRectangular', 'anchorOriginTopRightCircular', 'anchorOriginTopRightRectangular', 'anchorOriginBottomLeftCircular', 'anchorOriginBottomLeftRectangular', 'anchorOriginBottomRightCircular', 'anchorOriginBottomRightRectangular']));
+const RADIUS_STANDARD = 10;
+const RADIUS_DOT = 4;
+
+const extendUtilityClasses = ownerState => {
+  const {
+    color,
+    anchorOrigin,
+    overlap,
+    classes = {}
+  } = ownerState;
+  return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, classes, {
+    badge: (0,clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(classes.badge, (0,_mui_base_BadgeUnstyled__WEBPACK_IMPORTED_MODULE_5__.getBadgeUtilityClass)(`anchorOrigin${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_7__["default"])(anchorOrigin.vertical)}${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_7__["default"])(anchorOrigin.horizontal)}${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_7__["default"])(overlap)}`), (0,_mui_base_BadgeUnstyled__WEBPACK_IMPORTED_MODULE_5__.getBadgeUtilityClass)(`overlap${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_7__["default"])(overlap)}`), color !== 'default' && [(0,_mui_base_BadgeUnstyled__WEBPACK_IMPORTED_MODULE_5__.getBadgeUtilityClass)(`color${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_7__["default"])(color)}`), classes[`color${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_7__["default"])(color)}`]])
+  });
+};
+
+const BadgeRoot = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_8__["default"])('span', {
+  name: 'MuiBadge',
+  slot: 'Root',
+  overridesResolver: (props, styles) => styles.root
+})({
+  position: 'relative',
+  display: 'inline-flex',
+  // For correct alignment with the text.
+  verticalAlign: 'middle',
+  flexShrink: 0
+});
+const BadgeBadge = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_8__["default"])('span', {
+  name: 'MuiBadge',
+  slot: 'Badge',
+  overridesResolver: (props, styles) => {
+    const {
+      ownerState
+    } = props;
+    return [styles.badge, styles[ownerState.variant], styles[`anchorOrigin${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_7__["default"])(ownerState.anchorOrigin.vertical)}${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_7__["default"])(ownerState.anchorOrigin.horizontal)}${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_7__["default"])(ownerState.overlap)}`], ownerState.color !== 'default' && styles[`color${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_7__["default"])(ownerState.color)}`], ownerState.invisible && styles.invisible];
+  }
+})(({
+  theme,
+  ownerState
+}) => (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+  display: 'flex',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+  alignContent: 'center',
+  alignItems: 'center',
+  position: 'absolute',
+  boxSizing: 'border-box',
+  fontFamily: theme.typography.fontFamily,
+  fontWeight: theme.typography.fontWeightMedium,
+  fontSize: theme.typography.pxToRem(12),
+  minWidth: RADIUS_STANDARD * 2,
+  lineHeight: 1,
+  padding: '0 6px',
+  height: RADIUS_STANDARD * 2,
+  borderRadius: RADIUS_STANDARD,
+  zIndex: 1,
+  // Render the badge on top of potential ripples.
+  transition: theme.transitions.create('transform', {
+    easing: theme.transitions.easing.easeInOut,
+    duration: theme.transitions.duration.enteringScreen
+  })
+}, ownerState.color !== 'default' && {
+  backgroundColor: theme.palette[ownerState.color].main,
+  color: theme.palette[ownerState.color].contrastText
+}, ownerState.variant === 'dot' && {
+  borderRadius: RADIUS_DOT,
+  height: RADIUS_DOT * 2,
+  minWidth: RADIUS_DOT * 2,
+  padding: 0
+}, ownerState.anchorOrigin.vertical === 'top' && ownerState.anchorOrigin.horizontal === 'right' && ownerState.overlap === 'rectangular' && {
+  top: 0,
+  right: 0,
+  transform: 'scale(1) translate(50%, -50%)',
+  transformOrigin: '100% 0%',
+  [`&.${badgeClasses.invisible}`]: {
+    transform: 'scale(0) translate(50%, -50%)'
+  }
+}, ownerState.anchorOrigin.vertical === 'bottom' && ownerState.anchorOrigin.horizontal === 'right' && ownerState.overlap === 'rectangular' && {
+  bottom: 0,
+  right: 0,
+  transform: 'scale(1) translate(50%, 50%)',
+  transformOrigin: '100% 100%',
+  [`&.${badgeClasses.invisible}`]: {
+    transform: 'scale(0) translate(50%, 50%)'
+  }
+}, ownerState.anchorOrigin.vertical === 'top' && ownerState.anchorOrigin.horizontal === 'left' && ownerState.overlap === 'rectangular' && {
+  top: 0,
+  left: 0,
+  transform: 'scale(1) translate(-50%, -50%)',
+  transformOrigin: '0% 0%',
+  [`&.${badgeClasses.invisible}`]: {
+    transform: 'scale(0) translate(-50%, -50%)'
+  }
+}, ownerState.anchorOrigin.vertical === 'bottom' && ownerState.anchorOrigin.horizontal === 'left' && ownerState.overlap === 'rectangular' && {
+  bottom: 0,
+  left: 0,
+  transform: 'scale(1) translate(-50%, 50%)',
+  transformOrigin: '0% 100%',
+  [`&.${badgeClasses.invisible}`]: {
+    transform: 'scale(0) translate(-50%, 50%)'
+  }
+}, ownerState.anchorOrigin.vertical === 'top' && ownerState.anchorOrigin.horizontal === 'right' && ownerState.overlap === 'circular' && {
+  top: '14%',
+  right: '14%',
+  transform: 'scale(1) translate(50%, -50%)',
+  transformOrigin: '100% 0%',
+  [`&.${badgeClasses.invisible}`]: {
+    transform: 'scale(0) translate(50%, -50%)'
+  }
+}, ownerState.anchorOrigin.vertical === 'bottom' && ownerState.anchorOrigin.horizontal === 'right' && ownerState.overlap === 'circular' && {
+  bottom: '14%',
+  right: '14%',
+  transform: 'scale(1) translate(50%, 50%)',
+  transformOrigin: '100% 100%',
+  [`&.${badgeClasses.invisible}`]: {
+    transform: 'scale(0) translate(50%, 50%)'
+  }
+}, ownerState.anchorOrigin.vertical === 'top' && ownerState.anchorOrigin.horizontal === 'left' && ownerState.overlap === 'circular' && {
+  top: '14%',
+  left: '14%',
+  transform: 'scale(1) translate(-50%, -50%)',
+  transformOrigin: '0% 0%',
+  [`&.${badgeClasses.invisible}`]: {
+    transform: 'scale(0) translate(-50%, -50%)'
+  }
+}, ownerState.anchorOrigin.vertical === 'bottom' && ownerState.anchorOrigin.horizontal === 'left' && ownerState.overlap === 'circular' && {
+  bottom: '14%',
+  left: '14%',
+  transform: 'scale(1) translate(-50%, 50%)',
+  transformOrigin: '0% 100%',
+  [`&.${badgeClasses.invisible}`]: {
+    transform: 'scale(0) translate(-50%, 50%)'
+  }
+}, ownerState.invisible && {
+  transition: theme.transitions.create('transform', {
+    easing: theme.transitions.easing.easeInOut,
+    duration: theme.transitions.duration.leavingScreen
+  })
+}));
+const Badge = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(function Badge(inProps, ref) {
+  var _componentsProps$root, _componentsProps$badg;
+
+  const props = (0,_styles_useThemeProps__WEBPACK_IMPORTED_MODULE_9__["default"])({
+    props: inProps,
+    name: 'MuiBadge'
+  });
+
+  const {
+    anchorOrigin: anchorOriginProp = {
+      vertical: 'top',
+      horizontal: 'right'
+    },
+    component = 'span',
+    components = {},
+    componentsProps = {},
+    overlap: overlapProp = 'rectangular',
+    color: colorProp = 'default',
+    invisible: invisibleProp,
+    badgeContent: badgeContentProp,
+    showZero = false,
+    variant: variantProp = 'standard'
+  } = props,
+        other = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(props, _excluded);
+
+  const prevProps = (0,_mui_utils__WEBPACK_IMPORTED_MODULE_10__["default"])({
+    anchorOrigin: anchorOriginProp,
+    color: colorProp,
+    overlap: overlapProp
+  });
+  let invisible = invisibleProp;
+
+  if (invisibleProp == null && (badgeContentProp === 0 && !showZero || badgeContentProp == null && variantProp !== 'dot')) {
+    invisible = true;
+  }
+
+  const {
+    color = colorProp,
+    overlap = overlapProp,
+    anchorOrigin = anchorOriginProp
+  } = invisible ? prevProps : props;
+
+  const ownerState = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
+    anchorOrigin,
+    invisible,
+    color,
+    overlap
+  });
+
+  const classes = extendUtilityClasses(ownerState);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_base_BadgeUnstyled__WEBPACK_IMPORTED_MODULE_11__["default"], (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    anchorOrigin: anchorOrigin,
+    invisible: invisibleProp,
+    badgeContent: badgeContentProp,
+    showZero: showZero,
+    variant: variantProp
+  }, other, {
+    components: (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+      Root: BadgeRoot,
+      Badge: BadgeBadge
+    }, components),
+    componentsProps: {
+      root: (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, componentsProps.root, (0,_utils_shouldSpreadAdditionalProps__WEBPACK_IMPORTED_MODULE_12__["default"])(components.Root) && {
+        as: component,
+        ownerState: (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, (_componentsProps$root = componentsProps.root) == null ? void 0 : _componentsProps$root.ownerState, {
+          color,
+          overlap
+        })
+      }),
+      badge: (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, componentsProps.badge, (0,_utils_shouldSpreadAdditionalProps__WEBPACK_IMPORTED_MODULE_12__["default"])(components.Badge) && {
+        ownerState: (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, (_componentsProps$badg = componentsProps.badge) == null ? void 0 : _componentsProps$badg.ownerState, {
+          color,
+          overlap
+        })
+      })
+    },
+    classes: classes,
+    ref: ref
+  }));
+});
+ true ? Badge.propTypes
+/* remove-proptypes */
+= {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+
+  /**
+   * The anchor of the badge.
+   * @default {
+   *   vertical: 'top',
+   *   horizontal: 'right',
+   * }
+   */
+  anchorOrigin: prop_types__WEBPACK_IMPORTED_MODULE_13___default().shape({
+    horizontal: prop_types__WEBPACK_IMPORTED_MODULE_13___default().oneOf(['left', 'right']).isRequired,
+    vertical: prop_types__WEBPACK_IMPORTED_MODULE_13___default().oneOf(['bottom', 'top']).isRequired
+  }),
+
+  /**
+   * The content rendered within the badge.
+   */
+  badgeContent: (prop_types__WEBPACK_IMPORTED_MODULE_13___default().node),
+
+  /**
+   * The badge will be added relative to this node.
+   */
+  children: (prop_types__WEBPACK_IMPORTED_MODULE_13___default().node),
+
+  /**
+   * Override or extend the styles applied to the component.
+   */
+  classes: (prop_types__WEBPACK_IMPORTED_MODULE_13___default().object),
+
+  /**
+   * The color of the component. It supports those theme colors that make sense for this component.
+   * @default 'default'
+   */
+  color: prop_types__WEBPACK_IMPORTED_MODULE_13___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_13___default().oneOf(['default', 'primary', 'secondary', 'error', 'info', 'success', 'warning']), (prop_types__WEBPACK_IMPORTED_MODULE_13___default().string)]),
+
+  /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: (prop_types__WEBPACK_IMPORTED_MODULE_13___default().elementType),
+
+  /**
+   * The components used for each slot inside the Badge.
+   * Either a string to use a HTML element or a component.
+   * @default {}
+   */
+  components: prop_types__WEBPACK_IMPORTED_MODULE_13___default().shape({
+    Badge: (prop_types__WEBPACK_IMPORTED_MODULE_13___default().elementType),
+    Root: (prop_types__WEBPACK_IMPORTED_MODULE_13___default().elementType)
+  }),
+
+  /**
+   * The props used for each slot inside the Badge.
+   * @default {}
+   */
+  componentsProps: prop_types__WEBPACK_IMPORTED_MODULE_13___default().shape({
+    badge: (prop_types__WEBPACK_IMPORTED_MODULE_13___default().object),
+    root: (prop_types__WEBPACK_IMPORTED_MODULE_13___default().object)
+  }),
+
+  /**
+   * If `true`, the badge is invisible.
+   */
+  invisible: (prop_types__WEBPACK_IMPORTED_MODULE_13___default().bool),
+
+  /**
+   * Max count to show.
+   * @default 99
+   */
+  max: (prop_types__WEBPACK_IMPORTED_MODULE_13___default().number),
+
+  /**
+   * Wrapped shape the badge should overlap.
+   * @default 'rectangular'
+   */
+  overlap: prop_types__WEBPACK_IMPORTED_MODULE_13___default().oneOf(['circular', 'rectangular']),
+
+  /**
+   * Controls whether the badge is hidden when `badgeContent` is zero.
+   * @default false
+   */
+  showZero: (prop_types__WEBPACK_IMPORTED_MODULE_13___default().bool),
+
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   */
+  sx: prop_types__WEBPACK_IMPORTED_MODULE_13___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_13___default().arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_13___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_13___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_13___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_13___default().bool)])), (prop_types__WEBPACK_IMPORTED_MODULE_13___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_13___default().object)]),
+
+  /**
+   * The variant to use.
+   * @default 'standard'
+   */
+  variant: prop_types__WEBPACK_IMPORTED_MODULE_13___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_13___default().oneOf(['dot', 'standard']), (prop_types__WEBPACK_IMPORTED_MODULE_13___default().string)])
+} : 0;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Badge);
 
 /***/ }),
 
@@ -17037,183 +17851,6 @@ const textFieldClasses = (0,_mui_base__WEBPACK_IMPORTED_MODULE_1__["default"])('
 
 /***/ }),
 
-/***/ "./node_modules/@mui/material/Toolbar/Toolbar.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/@mui/material/Toolbar/Toolbar.js ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
-/* harmony import */ var _mui_base__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/base */ "./node_modules/@mui/base/composeClasses/composeClasses.js");
-/* harmony import */ var _styles_useThemeProps__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../styles/useThemeProps */ "./node_modules/@mui/material/styles/useThemeProps.js");
-/* harmony import */ var _styles_styled__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../styles/styled */ "./node_modules/@mui/material/styles/styled.js");
-/* harmony import */ var _toolbarClasses__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./toolbarClasses */ "./node_modules/@mui/material/Toolbar/toolbarClasses.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-const _excluded = ["className", "component", "disableGutters", "variant"];
-
-
-
-
-
-
-
-
-
-const useUtilityClasses = ownerState => {
-  const {
-    classes,
-    disableGutters,
-    variant
-  } = ownerState;
-  const slots = {
-    root: ['root', !disableGutters && 'gutters', variant]
-  };
-  return (0,_mui_base__WEBPACK_IMPORTED_MODULE_5__["default"])(slots, _toolbarClasses__WEBPACK_IMPORTED_MODULE_6__.getToolbarUtilityClass, classes);
-};
-
-const ToolbarRoot = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_7__["default"])('div', {
-  name: 'MuiToolbar',
-  slot: 'Root',
-  overridesResolver: (props, styles) => {
-    const {
-      ownerState
-    } = props;
-    return [styles.root, !ownerState.disableGutters && styles.gutters, styles[ownerState.variant]];
-  }
-})(({
-  theme,
-  ownerState
-}) => (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
-  position: 'relative',
-  display: 'flex',
-  alignItems: 'center'
-}, !ownerState.disableGutters && {
-  paddingLeft: theme.spacing(2),
-  paddingRight: theme.spacing(2),
-  [theme.breakpoints.up('sm')]: {
-    paddingLeft: theme.spacing(3),
-    paddingRight: theme.spacing(3)
-  }
-}, ownerState.variant === 'dense' && {
-  minHeight: 48
-}), ({
-  theme,
-  ownerState
-}) => ownerState.variant === 'regular' && theme.mixins.toolbar);
-const Toolbar = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(function Toolbar(inProps, ref) {
-  const props = (0,_styles_useThemeProps__WEBPACK_IMPORTED_MODULE_8__["default"])({
-    props: inProps,
-    name: 'MuiToolbar'
-  });
-
-  const {
-    className,
-    component = 'div',
-    disableGutters = false,
-    variant = 'regular'
-  } = props,
-        other = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(props, _excluded);
-
-  const ownerState = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
-    component,
-    disableGutters,
-    variant
-  });
-
-  const classes = useUtilityClasses(ownerState);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(ToolbarRoot, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
-    as: component,
-    className: (0,clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(classes.root, className),
-    ref: ref,
-    ownerState: ownerState
-  }, other));
-});
- true ? Toolbar.propTypes
-/* remove-proptypes */
-= {
-  // ----------------------------- Warning --------------------------------
-  // | These PropTypes are generated from the TypeScript type definitions |
-  // |     To update them edit the d.ts file and run "yarn proptypes"     |
-  // ----------------------------------------------------------------------
-
-  /**
-   * The Toolbar children, usually a mixture of `IconButton`, `Button` and `Typography`.
-   * The Toolbar is a flex container, allowing flex item properites to be used to lay out the children.
-   */
-  children: (prop_types__WEBPACK_IMPORTED_MODULE_9___default().node),
-
-  /**
-   * Override or extend the styles applied to the component.
-   */
-  classes: (prop_types__WEBPACK_IMPORTED_MODULE_9___default().object),
-
-  /**
-   * @ignore
-   */
-  className: (prop_types__WEBPACK_IMPORTED_MODULE_9___default().string),
-
-  /**
-   * The component used for the root node.
-   * Either a string to use a HTML element or a component.
-   */
-  component: (prop_types__WEBPACK_IMPORTED_MODULE_9___default().elementType),
-
-  /**
-   * If `true`, disables gutter padding.
-   * @default false
-   */
-  disableGutters: (prop_types__WEBPACK_IMPORTED_MODULE_9___default().bool),
-
-  /**
-   * The system prop that allows defining system overrides as well as additional CSS styles.
-   */
-  sx: prop_types__WEBPACK_IMPORTED_MODULE_9___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_9___default().arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_9___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_9___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_9___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_9___default().bool)])), (prop_types__WEBPACK_IMPORTED_MODULE_9___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_9___default().object)]),
-
-  /**
-   * The variant to use.
-   * @default 'regular'
-   */
-  variant: prop_types__WEBPACK_IMPORTED_MODULE_9___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_9___default().oneOf(['dense', 'regular']), (prop_types__WEBPACK_IMPORTED_MODULE_9___default().string)])
-} : 0;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Toolbar);
-
-/***/ }),
-
-/***/ "./node_modules/@mui/material/Toolbar/toolbarClasses.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/@mui/material/Toolbar/toolbarClasses.js ***!
-  \**************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getToolbarUtilityClass": () => (/* binding */ getToolbarUtilityClass),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _mui_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @mui/base */ "./node_modules/@mui/base/generateUtilityClass/generateUtilityClass.js");
-/* harmony import */ var _mui_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mui/base */ "./node_modules/@mui/base/generateUtilityClasses/generateUtilityClasses.js");
-
-function getToolbarUtilityClass(slot) {
-  return (0,_mui_base__WEBPACK_IMPORTED_MODULE_0__["default"])('MuiToolbar', slot);
-}
-const toolbarClasses = (0,_mui_base__WEBPACK_IMPORTED_MODULE_1__["default"])('MuiToolbar', ['root', 'gutters', 'regular', 'dense']);
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (toolbarClasses);
-
-/***/ }),
-
 /***/ "./node_modules/@mui/material/Typography/Typography.js":
 /*!*************************************************************!*\
   !*** ./node_modules/@mui/material/Typography/Typography.js ***!
@@ -17710,6 +18347,37 @@ const red = {
   A700: '#d50000'
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (red);
+
+/***/ }),
+
+/***/ "./node_modules/@mui/material/colors/yellow.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/@mui/material/colors/yellow.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const yellow = {
+  50: '#fffde7',
+  100: '#fff9c4',
+  200: '#fff59d',
+  300: '#fff176',
+  400: '#ffee58',
+  500: '#ffeb3b',
+  600: '#fdd835',
+  700: '#fbc02d',
+  800: '#f9a825',
+  900: '#f57f17',
+  A100: '#ffff8d',
+  A200: '#ffff00',
+  A400: '#ffea00',
+  A700: '#ffd600'
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (yellow);
 
 /***/ }),
 
@@ -19118,6 +19786,106 @@ function getTransitionProps(props, options) {
 
 /***/ }),
 
+/***/ "./node_modules/@mui/material/useMediaQuery/useMediaQuery.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@mui/material/useMediaQuery/useMediaQuery.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ useMediaQuery)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _mui_system__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mui/system */ "./node_modules/@mui/system/esm/useThemeWithoutDefault.js");
+/* harmony import */ var _mui_system__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/system */ "./node_modules/@mui/system/esm/useThemeProps/getThemeProps.js");
+/* harmony import */ var _utils_useEnhancedEffect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/useEnhancedEffect */ "./node_modules/@mui/material/utils/useEnhancedEffect.js");
+
+
+
+/**
+ * @deprecated Not used internally. Use `MediaQueryListEvent` from lib.dom.d.ts instead.
+ */
+
+function useMediaQuery(queryInput, options = {}) {
+  const theme = (0,_mui_system__WEBPACK_IMPORTED_MODULE_1__["default"])(); // Wait for jsdom to support the match media feature.
+  // All the browsers MUI support have this built-in.
+  // This defensive check is here for simplicity.
+  // Most of the time, the match media logic isn't central to people tests.
+
+  const supportMatchMedia = typeof window !== 'undefined' && typeof window.matchMedia !== 'undefined';
+  const {
+    defaultMatches = false,
+    matchMedia = supportMatchMedia ? window.matchMedia : null,
+    noSsr = false,
+    ssrMatchMedia = null
+  } = (0,_mui_system__WEBPACK_IMPORTED_MODULE_2__["default"])({
+    name: 'MuiUseMediaQuery',
+    props: options,
+    theme
+  });
+
+  if (true) {
+    if (typeof queryInput === 'function' && theme === null) {
+      console.error(['MUI: The `query` argument provided is invalid.', 'You are providing a function without a theme in the context.', 'One of the parent elements needs to use a ThemeProvider.'].join('\n'));
+    }
+  }
+
+  let query = typeof queryInput === 'function' ? queryInput(theme) : queryInput;
+  query = query.replace(/^@media( ?)/m, '');
+  const [match, setMatch] = react__WEBPACK_IMPORTED_MODULE_0__.useState(() => {
+    if (noSsr && supportMatchMedia) {
+      return matchMedia(query).matches;
+    }
+
+    if (ssrMatchMedia) {
+      return ssrMatchMedia(query).matches;
+    } // Once the component is mounted, we rely on the
+    // event listeners to return the correct matches value.
+
+
+    return defaultMatches;
+  });
+  (0,_utils_useEnhancedEffect__WEBPACK_IMPORTED_MODULE_3__["default"])(() => {
+    let active = true;
+
+    if (!supportMatchMedia) {
+      return undefined;
+    }
+
+    const queryList = matchMedia(query);
+
+    const updateMatch = () => {
+      // Workaround Safari wrong implementation of matchMedia
+      // TODO can we remove it?
+      // https://github.com/mui-org/material-ui/pull/17315#issuecomment-528286677
+      if (active) {
+        setMatch(queryList.matches);
+      }
+    };
+
+    updateMatch();
+    queryList.addListener(updateMatch);
+    return () => {
+      active = false;
+      queryList.removeListener(updateMatch);
+    };
+  }, [query, matchMedia, supportMatchMedia]);
+
+  if (true) {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    react__WEBPACK_IMPORTED_MODULE_0__.useDebugValue({
+      query,
+      match
+    });
+  }
+
+  return match;
+}
+
+/***/ }),
+
 /***/ "./node_modules/@mui/material/utils/capitalize.js":
 /*!********************************************************!*\
   !*** ./node_modules/@mui/material/utils/capitalize.js ***!
@@ -19395,6 +20163,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @mui/utils */ "./node_modules/@mui/utils/esm/setRef.js");
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_mui_utils__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/***/ }),
+
+/***/ "./node_modules/@mui/material/utils/shouldSpreadAdditionalProps.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@mui/material/utils/shouldSpreadAdditionalProps.js ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _mui_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @mui/base */ "./node_modules/@mui/base/utils/isHostComponent.js");
+
+
+const shouldSpreadAdditionalProps = Slot => {
+  return !Slot || !(0,_mui_base__WEBPACK_IMPORTED_MODULE_0__["default"])(Slot);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (shouldSpreadAdditionalProps);
 
 /***/ }),
 
@@ -23473,6 +24263,32 @@ function useIsFocusVisible() {
 
 /***/ }),
 
+/***/ "./node_modules/@mui/utils/esm/usePreviousProps.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/@mui/utils/esm/usePreviousProps.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+const usePreviousProps = value => {
+  const ref = react__WEBPACK_IMPORTED_MODULE_0__.useRef({});
+  react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
+    ref.current = value;
+  });
+  return ref.current;
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (usePreviousProps);
+
+/***/ }),
+
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -25550,7 +26366,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/styles/createTheme.js");
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/system/esm/ThemeProvider/ThemeProvider.js");
 /* harmony import */ var _mui_material_colors__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material/colors */ "./node_modules/@mui/material/colors/purple.js");
-/* harmony import */ var _mui_material_colors__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material/colors */ "./node_modules/@mui/material/colors/green.js");
+/* harmony import */ var _mui_material_colors__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material/colors */ "./node_modules/@mui/material/colors/yellow.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
@@ -25580,9 +26396,6 @@ var theme = (0,_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"])({
   mode: 'dark',
   components: {
     MuiModal: {
-      defaultProps: {
-        root: {}
-      },
       styleOverrides: {
         root: {
           border: 'none'
@@ -25898,7 +26711,7 @@ function Login(_ref) {
             value: "remember",
             color: "primary"
           }),
-          label: "Remember me"
+          label: "\u0417\u0430\u043F\u043E\u043C\u043D\u0438\u0442\u044C \u043C\u0435\u043D\u044F"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_lab__WEBPACK_IMPORTED_MODULE_15__["default"], {
           type: "submit",
           fullWidth: true,
@@ -26127,7 +26940,7 @@ function SignUp(_ref) {
                 value: "allowExtraEmails",
                 color: "primary"
               }),
-              label: "I want to receive inspiration, marketing promotions and updates via email."
+              label: "\u042F \u0445\u043E\u0447\u0443 \u043F\u043E\u043B\u0443\u0447\u0430\u0442\u044C \u043D\u043E\u0432\u044B\u0435 \u043E\u0431\u043D\u043E\u0432\u043B\u0435\u043D\u0438\u044F, \u043D\u0430 \u0441\u0432\u043E\u044E \u043F\u043E\u0447\u0442\u0443"
             })
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_lab__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -26189,10 +27002,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/react/includes/Main/Honey.jsx":
-/*!*************************************************!*\
-  !*** ./resources/react/includes/Main/Honey.jsx ***!
-  \*************************************************/
+/***/ "./resources/react/includes/Main/HoneyCombs.jsx":
+/*!******************************************************!*\
+  !*** ./resources/react/includes/Main/HoneyCombs.jsx ***!
+  \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -26201,129 +27014,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
 
-function Honey() {
-  return (
-    /*#__PURE__*/
-    // <div className="honey">
-    //   {Array(6).fill(1).map((e, index) => {
-    //     return (
-    //       <React.Fragment key={index}>
-    //         <div className="honey_body">
-    //           {Array(19).fill(1).map((e, index) => {
-    //             return (
-    //               <div className="comb" key={index}>
-    //               </div>
-    //             )
-    //           })}
-    //         </div>
-    //         <div className="honey_body honey_moved">
-    //           {Array(19).fill(1).map((e, index) => {
-    //             return (
-    //               <div className="comb" key={index}>
-    //               </div>
-    //             )
-    //           })}
-    //         </div>
-    //       </React.Fragment>
-    //     )
-    //   })}
-    // </div>
-    // <ul className="honeycomb">
-    //   {Array(15).fill(1).map((e, index) => {
-    //     return (
-    //       <li className="honeycomb-cell" key={index}>
-    //         <img className="honeycomb-cell_image" src="img/work-1.jpg" />
-    //         <div className="honeycomb-cell_title">Web Design</div>
-    //       </li>
-    //     )
-    //   })}
-    //   <li className="honeycomb-cell honeycomb_placeholder">
-    //   </li>
-    // </ul>
-    (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "honey",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
-        className: "hexGrid",
-        children: Array(17).fill(1).map(function (e, index) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-            className: "hex",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "hexIn",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                className: "hexLink",
-                href: "#",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-                  src: "https://media.istockphoto.com/photos/purple-defocused-blurred-motion-abstract-background-picture-id1273929462?k=20&m=1273929462&s=612x612&w=0&h=jJ0xkuDVJQMp6YwnAiqbtM8nwid36M97VIFxCP_sKCE=",
-                  alt: ""
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  children: "This is a title"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-                  children: "Some sample text about the article this hexagon leads to"
-                })]
-              })
+function HoneyCombs() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    className: "honey",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "honey_inner",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "honey_combs",
+        children: Array(17).fill(17).map(function (e, index) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            style: {
+              backgroundImage: "url(https://idg.net.ua/blog/wp-content/uploads/radial-gradient-top-left.png)"
+            },
+            className: "comb",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+              to: "",
+              className: "comb_link",
+              children: "\u041C\u043E\u0431\u0438\u043B\u044C\u043D\u044B\u0439 \u0431\u0438\u0437\u043D\u0435\u0441-\u0442\u0440\u0435\u043D\u0435\u0440"
             })
           }, index);
         })
       })
     })
-  );
+  });
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Honey); // <div className='honey'>
-//   <div className="comb_1 comb_grid">
-//     <div className="item">
-//     </div>
-//     <div className="item">
-//     </div>
-//     <div className="item">
-//     </div>
-//     <div className="item">
-//     </div>
-//     <div className="item">
-//     </div>
-//     <div className="item">
-//     </div>
-//     <div className="item">
-//     </div>
-//   </div>
-//   <div className="comb_2 comb_grid">
-//     <div className="item">
-//     </div>
-//     <div className="item">
-//     </div>
-//     <div className="item">
-//     </div>
-//     <div className="item">
-//     </div>
-//     <div className="item">
-//     </div>
-//     <div className="item">
-//     </div>
-//   </div>
-//   <div className="comb_3 comb_grid">
-//     <div className="item">
-//     </div>
-//     <div className="item">
-//     </div>
-//     <div className="item">
-//     </div>
-//     <div className="item">
-//     </div>
-//     <div className="item">
-//     </div>
-//     <div className="item">
-//     </div>
-//   </div>
-//   <div className="comb_4 comb_grid">
-//     <div className="item">
-//     </div>
-//   </div>
-// </div>
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HoneyCombs);
 
 /***/ }),
 
@@ -26336,9 +27058,9 @@ function Honey() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Honey": () => (/* reexport safe */ _Main_Honey__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */   "HoneyCombs": () => (/* reexport safe */ _Main_HoneyCombs__WEBPACK_IMPORTED_MODULE_0__["default"])
 /* harmony export */ });
-/* harmony import */ var _Main_Honey__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Main/Honey */ "./resources/react/includes/Main/Honey.jsx");
+/* harmony import */ var _Main_HoneyCombs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Main/HoneyCombs */ "./resources/react/includes/Main/HoneyCombs.jsx");
 
 
 
@@ -26659,17 +27381,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _mui_material_AppBar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material/AppBar */ "./node_modules/@mui/material/AppBar/AppBar.js");
-/* harmony import */ var _mui_material_Box__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material/Box */ "./node_modules/@mui/material/Box/Box.js");
-/* harmony import */ var _mui_material_Toolbar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material/Toolbar */ "./node_modules/@mui/material/Toolbar/Toolbar.js");
-/* harmony import */ var _mui_material_Typography__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material/Typography */ "./node_modules/@mui/material/Typography/Typography.js");
-/* harmony import */ var _mui_material_Button__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material/Button */ "./node_modules/@mui/material/Button/Button.js");
-/* harmony import */ var _mui_material_IconButton__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material/IconButton */ "./node_modules/@mui/material/IconButton/IconButton.js");
-/* harmony import */ var _mui_icons_material_Menu__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/icons-material/Menu */ "./node_modules/@mui/icons-material/Menu.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Badge/Badge.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Avatar/Avatar.js");
 /* harmony import */ var _components_Modall__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Modall */ "./resources/react/components/Modall.jsx");
-/* harmony import */ var _components_Login__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Login */ "./resources/react/components/Login.jsx");
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components */ "./resources/react/components/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components */ "./resources/react/components/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/IconButton/IconButton.js");
+/* harmony import */ var _mui_icons_material_Menu__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/icons-material/Menu */ "./node_modules/@mui/icons-material/Menu.js");
+/* harmony import */ var _mui_material_styles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material/styles */ "./node_modules/@mui/material/styles/useTheme.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/useMediaQuery/useMediaQuery.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -26695,51 +27418,80 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
-
 function Header() {
+  var theme = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_4__["default"])();
+  var match = (0,_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"])(theme.breakpoints.up('sm'));
+  setInterval(function (e) {
+    console.log(match);
+  });
+
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
       modal = _useState2[0],
       setModal = _useState2[1];
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      sx: {
-        flexGrow: 1
-      },
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_AppBar__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        position: "static",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material_Toolbar__WEBPACK_IMPORTED_MODULE_7__["default"], {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_IconButton__WEBPACK_IMPORTED_MODULE_8__["default"], {
-            size: "large",
-            edge: "start",
-            color: "inherit",
-            "aria-label": "menu",
-            sx: {
-              mr: 2
-            },
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_icons_material_Menu__WEBPACK_IMPORTED_MODULE_9__["default"], {})
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_Typography__WEBPACK_IMPORTED_MODULE_10__["default"], {
-            variant: "h6",
-            component: "div",
-            sx: {
-              flexGrow: 1
-            },
-            children: "News"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_Button__WEBPACK_IMPORTED_MODULE_11__["default"], {
-            color: "inherit",
-            onClick: function onClick(e) {
-              return setModal(true);
-            },
-            children: "Login"
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("header", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "container",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          className: "header_inner",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            className: "header_logo",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link, {
+              to: "/",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+                src: "https://cdn.vox-cdn.com/thumbor/Pkmq1nm3skO0-j693JTMd7RL0Zk=/0x0:2012x1341/1200x800/filters:focal(0x0:2012x1341)/cdn.vox-cdn.com/uploads/chorus_image/image/47070706/google2.0.0.jpg",
+                alt: ""
+              })
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("nav", {
+            className: "header_nav",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("ul", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+                children: "\u041E \u043D\u0430\u0441"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+                children: "\u041D\u0430\u0448\u0430 \u043A\u043E\u043C\u0430\u043D\u0434\u0430"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+                children: "\u0421\u0435\u0440\u0432\u0438\u0441\u044B"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+                children: match
+              })]
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            className: "header_settings",
+            children:  true ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link, {
+              to: "/profile",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
+                sx: {
+                  display: 'flex',
+                  alignItems: 'center'
+                },
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_icons_material_Menu__WEBPACK_IMPORTED_MODULE_9__["default"], {})
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+                  variant: "div",
+                  component: "div",
+                  sx: {
+                    mr: 2
+                  },
+                  children: "Arman"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
+                  variant: "dot",
+                  color: "secondary",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+                    src: "https://media.istockphoto.com/photos/digital-eye-wave-lines-stock-background-stock-video-picture-id1226241649?b=1&k=20&m=1226241649&s=170667a&w=0&h=lXhD5bdn_YT50-ItctUnqB2WiGZ8Jye1GZHjvDsb2Xo="
+                  })
+                })]
+              })
+            }) : /*#__PURE__*/0
           })]
         })
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_Modall__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_Modall__WEBPACK_IMPORTED_MODULE_1__["default"], {
       open: modal,
       close: setModal,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components__WEBPACK_IMPORTED_MODULE_3__.AuthModal, {})
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_2__.AuthModal, {})
     })]
   });
 }
@@ -26816,7 +27568,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Main() {
+<<<<<<< HEAD
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_includes__WEBPACK_IMPORTED_MODULE_1__.Honey, {});
+=======
+<<<<<<< HEAD
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_includes__WEBPACK_IMPORTED_MODULE_1__.HoneyCombs, {});
+=======
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_includes__WEBPACK_IMPORTED_MODULE_1__.Honey, {});
+>>>>>>> origin/main
+>>>>>>> 42923eb (header + footer + honey => honeycombs)
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Main);
