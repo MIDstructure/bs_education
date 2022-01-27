@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto&display=swap');
 @import 'variables';
-@import 'honey';
-@import 'modal';
-@import 'footer';
 
 *,*:before,*:after{
   padding: 0;
@@ -33,34 +30,11 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400; font-family: 'Quicksand', 
 $font: 'Roboto', sans-serif;
 $Font: 'Quicksand', sans-serif;
 
-.light {
-  animation: lighter .2s forwards ease-in-out;
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
 }
-
-.dark {
-  animation: darker .2s forwards ease-in-out;
-}
-
-@keyframes darker {
-  from {
-
-  }
-  to {
-    background-color: black;
-    color: white;
-  }
-}
-
-@keyframes lighter {
-  from {
-    
-  }
-  to {
-    background-color: white;
-    color: black;
-  }
-}
-
 
 ::-webkit-scrollbar {
   width: 4px;
@@ -69,3 +43,8 @@ $Font: 'Quicksand', sans-serif;
 ::-webkit-scrollbar-track {
   background: tomato;
 }
+
+@import 'honey';
+@import 'modal';
+@import 'header';
+@import 'footer';

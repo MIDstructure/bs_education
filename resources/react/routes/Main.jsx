@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Honey } from '../includes';
+import { HoneyCombs } from '../includes';
 
 
 function Main() {
 
   return (
-    <Honey/>
+    <HoneyCombs/>
   )
 }
 

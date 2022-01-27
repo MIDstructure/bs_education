@@ -10,7 +10,7 @@ import axios from 'axios'
 import { Footer, Header, NotFound } from './modules';
 import { createTheme, ThemeProvider } from "@mui/material";
 
-import { green, purple } from '@mui/material/colors';
+import { yellow, purple } from '@mui/material/colors';
 
 
 const theme = createTheme({
@@ -19,7 +19,7 @@ const theme = createTheme({
       main: purple[500],
     },
     secondary: {
-      main: green[500],
+      main: yellow[500],
     },
   },
   // typography: {
@@ -28,11 +28,6 @@ const theme = createTheme({
     mode: 'dark',
     components: {
       MuiModal: {
-        defaultProps: {
-          root: {
-
-          }
-        },
         styleOverrides: {
           root: {
             border: 'none',
@@ -41,6 +36,7 @@ const theme = createTheme({
       }
     }
 })
+
 
 function Home() {
 

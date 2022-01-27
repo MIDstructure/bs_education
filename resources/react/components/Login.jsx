@@ -57,7 +57,7 @@ function Login({setCurrent}) {
 
 
   return (
-    <Container component="main" maxWidth="xs" >
+    <Container component="main" maxWidth="xs">
       <Box
         sx={{
           display: 'flex',
@@ -103,7 +103,7 @@ function Login({setCurrent}) {
           </FormHelperText>
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
+            label="Запомнить меня"
           />
           <LoadingButton
             type="submit"

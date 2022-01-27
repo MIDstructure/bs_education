@@ -89,7 +89,7 @@ function SignUp({setCurrent}) {
             <Grid item xs={12}>
               <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" color="primary" />}
-                label="I want to receive inspiration, marketing promotions and updates via email."
+                label="Я хочу получать новые обновления, на свою почту"
               />
             </Grid>
           </Grid>
