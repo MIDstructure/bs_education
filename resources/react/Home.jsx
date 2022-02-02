@@ -11,6 +11,10 @@ import { Footer, Header, NotFound } from './modules';
 import { createTheme, ThemeProvider } from "@mui/material";
 
 import { yellow, purple } from '@mui/material/colors';
+import Courses from './routes/Courses';
+
+
+
 
 
 const theme = createTheme({
@@ -22,9 +26,7 @@ const theme = createTheme({
       main: yellow[500],
     },
   },
-  // typography: {
-    //   fontFamily: 'Quicksand, sans-serif',
-    // }
+
     mode: 'dark',
     components: {
       MuiModal: {
@@ -46,8 +48,10 @@ function Home() {
       <Routes>
         <Route path='*' element={<NotFound/>}/>
         <Route path="/" element={<Main/>}/>
+        <Route path="/courses" element={<Courses />}/>
+        {/* <Route path="/courses" element={<Courses />}/> */}
         <Route element={<ProtectedRoutes/>}>
-          <Route path="/profile" element={<Profile/>} /> 
+        <Route path="/profile" element={<Profile/>} /> 
         </Route>
       </Routes>
       <Footer/>
