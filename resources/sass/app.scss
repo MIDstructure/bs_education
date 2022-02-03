@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap');
+@import "~bootstrap/scss/bootstrap";
 @import 'variables';
+
 
 *,*:before,*:after{
   padding: 0;
@@ -24,17 +26,13 @@ a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
 
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400; font-family: 'Quicksand', sans-serif;}
+h1,h2,h3,h4,h5,h6{font-weight: 400; font-family: 'Raleway', sans-serif;}
+
 
 
 $font: 'Roboto', sans-serif;
-$Font: 'Quicksand', sans-serif;
+$Font: 'Raleway', sans-serif;
 
-
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-}
 
 ::-webkit-scrollbar {
   width: 4px;
@@ -50,3 +48,4 @@ $Font: 'Quicksand', sans-serif;
 @import 'header';
 @import 'footer';
 @import 'services';
+@import 'aboutus';

@@ -1,8 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
+import { SideBar } from "../includes";
+
+
+
+
+
 
 function Profile() {
+
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
-    <h1>Profile</h1>
+    <div className="profile">
+
+    </div>
   )
 }
 

@@ -1,25 +1,7 @@
 import * as React from 'react';
-
-import { Avatar, TextField, FormControlLabel, Checkbox, Link, Grid, Box, Typography, Container, FormHelperText } from '@mui/material'
-// import { LoadingButton } from '@mui/lab'
-import { LoadingButton } from '@mui/lab';
-
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { loginValid } from "../service/Validation";
 
-import yup from 'yup'
 
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>
-      {new Date().getFullYear()}
-    </Typography>
-  );
-}
 
 
 
@@ -57,77 +39,59 @@ function Login({setCurrent}) {
 
 
   return (
-    <Container component="main" maxWidth="xs">
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}
-        mt={2}
-        mb={4}
-      >
-        <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-          <LockOutlinedIcon />
-        </Avatar>
-        <Typography component="h1" variant="h5">
-          Войти
-        </Typography>
-        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-          <TextField
-            value={user.email}
-            onChange={handleInput}
-            name="email"
-            label="Электронная почта"
-            id="email"
-            autoComplete="email"
-            margin="normal"
-            required
-            fullWidth
-            autoFocus
-          />
-          <TextField
-            value={user.password}
-            onChange={handleInput}
-            name="password"
-            margin="normal"
-            required
-            fullWidth
-            label="Пароль"
-            type="password"
-            id="password"
-            autoComplete="current-password"
-          />
-          <FormHelperText>
+    // <div className="card" style={{borderRadius: '1rem'}}>
+    //   <div className="card-body p-5 text-center">
+    //     <div className="mb-md-5 mt-md-4 pb-5">
+    //       <h2 className="fw-bold mb-2 text-uppercase">Login</h2>
+    //       <p className="mb-5">Please enter your login and password!</p>
+    //       <div className="form-outline form-white mb-4">
+    //         <input type="email" id="typeEmailX" className="form-control form-control-lg" />
+    //         <label className="form-label" htmlFor="typeEmailX">Email</label>
+    //       </div>
+    //       <div className="form-outline form-white mb-4">
+    //         <input type="password" id="typePasswordX" className="form-control form-control-lg" />
+    //         <label className="form-label" htmlFor="typePasswordX">Password</label>
+    //       </div>
+    //       <p className="small mb-5 pb-lg-2"><a className="" href="#!">Forgot password?</a></p>
+    //       <button className="btn btn-outline-dark btn-lg px-5" type="submit">Login</button>
+    //       <div className="d-flex justify-content-center text-center mt-4 pt-1">
+    //         <a href="#!" className=""><i className="fab fa-facebook-f fa-lg" /></a>
+    //         <a href="#!" className=""><i className="fab fa-twitter fa-lg mx-4 px-2" /></a>
+    //         <a href="#!" className=""><i className="fab fa-google fa-lg" /></a>
+    //       </div>
+    //     </div>
+    //     <div>
+    //       <p className="mb-0">Don't have an account? <a onClick={e => setCurrent(2)} className="fw-bold">Sign Up</a></p>
+    //     </div>
+    //   </div>
+    // </div>
 
-          </FormHelperText>
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Запомнить меня"
-          />
-          <LoadingButton
-            type="submit"
-            fullWidth
-            variant="contained"
-            sx={{ mt: 3, mb: 2 }}
-          >
-            Войти
-          </LoadingButton>
-          <Grid container>
-            <Grid item xs>
-              <Link href="#" variant="body2">
-                Забыли пароль?
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link href="#" variant="body2" onClick={e => setCurrent(2)}>
-                Еще нет аккаунта?
-              </Link>
-            </Grid>
-          </Grid>
-        </Box>
-      </Box>
-    </Container>
+    <div className="card">
+      <div className="card-body p-5">
+        <h2 className="text-uppercase text-center mb-5">Войти</h2>
+        <form>
+          <div className="form-outline mb-4">
+            <input type="email" id="form3Example3cg" className="form-control form-control-lg" />
+            <label className="form-label" htmlFor="form3Example3cg">Почта</label>
+          </div>
+          <div className="form-outline mb-4">
+            <input type="password" id="form3Example4cg" className="form-control form-control-lg" />
+            <label className="form-label" htmlFor="form3Example4cg">Пароль</label>
+          </div>
+          <div className="form-check d-flex justify-content-center mb-5">
+            <input className="form-check-input me-2" type="checkbox" defaultValue id="form2Example3cg" />
+            <label className="form-check-label d-flex align-items-center " htmlFor="form2Example3g">
+              I agree all statements in <a href="#!" className="text-body"><u>Terms of service</u></a>
+            </label>
+          </div>
+          <div className="d-grid gap-2">
+            <button type="button" className="btn btn-primary btn-block btn-lg text-light">Войти</button>
+          </div>
+          <p className="text-center text-muted mt-5 mb-0">Еще нет аккаунта<a onClick={e => setCurrent(2)} className="fw-bold text-body ms-2"><u>Создать</u></a></p>
+        </form>
+      </div>
+    </div>
+
   );
 }
 
