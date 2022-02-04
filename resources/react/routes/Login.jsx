@@ -2,15 +2,12 @@ import axios from "axios";
 import * as React from 'react';
 import { loginValid } from "../service/Validation";
 import Cookies from 'js-cookie'
-import { useNavigate } from "react-router-dom";
 
 
 
 
 
 function Login({setCurrent}) {
-
-  const navigate = useNavigate()
 
   const [user, setUser] = React.useState({
     email: '',
@@ -40,13 +37,11 @@ function Login({setCurrent}) {
     //   console.log(e.inner.map(e => {return e.message}), "errors");
     //   setValid({...valid, error: e.message})
     // })
-    axios.post("api/login", user)
+    axios.post("api/login")
     .then(e => {
       console.log("вошел");
       Cookies.set('logged_in', true)
-      navigate('/profile')
-      navigate(0)
-    })  
+    })
   };
 
 
