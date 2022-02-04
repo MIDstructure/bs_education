@@ -1,8 +1,8 @@
 .honey {
   --s: 250px;  /* size  */
-  --m: 4px;    /* margin */
+  --m: -5px;    /* margin */
   --f: calc(1.732 * var(--s) + 4 * var(--m)  - 1px);
-  background-color: rgb(58, 57, 57);
+  // background-color: rgb(58, 57, 57);
   overflow: hidden;
   &_inner {
     display: flex;
@@ -15,6 +15,7 @@
 
 .honey_combs {
   font-size: 0; /*disable white space between inline block element */
+  padding: 0px 50px;
   &::before {
     content: "";
     width: calc(var(--s)/2 + var(--m));
@@ -37,7 +38,8 @@
   margin-bottom: calc(var(--m) - var(--s)*0.2885); 
   transition: transform .1s;
   padding: 15px;
-  background: no-repeat center;
+  background: no-repeat;
+  background-size: contain;
   &:hover {
     transform: scale(1.07);
   }
@@ -62,6 +64,9 @@
     width: fit-content;
     padding: 15px;
     font-weight: 600;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
   }
 }
 

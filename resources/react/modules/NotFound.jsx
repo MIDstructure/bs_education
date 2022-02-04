@@ -2,7 +2,9 @@ import React from 'react';
 
 function NotFound() {
   return (
-    <h1> not found </h1>
+    <div className="container h-100vh">
+      <h1 className="text-center"> not found </h1>
+    </div>
   )
 }
 
