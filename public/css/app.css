@@ -11287,6 +11287,7 @@ textarea.form-control-lg {
   margin: 0;
   border: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 a:focus, a:active {
@@ -11353,10 +11354,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .honey {
   --s: 250px;
   /* size  */
-  --m: 4px;
+  --m: -5px;
   /* margin */
   --f: calc(1.732 * var(--s) + 4 * var(--m) - 1px);
-  background-color: #3a3939;
   overflow: hidden;
 }
 .honey_inner {
@@ -11370,6 +11370,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .honey_combs {
   font-size: 0;
   /*disable white space between inline block element */
+  padding: 0px 50px;
 }
 .honey_combs::before {
   content: "";
@@ -11392,7 +11393,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-bottom: calc(var(--m) - var(--s) * 0.2885);
   transition: transform 0.1s;
   padding: 15px;
-  background: no-repeat center;
+  background: no-repeat;
+  background-size: contain;
 }
 .comb:hover {
   transform: scale(1.07);
@@ -11414,6 +11416,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   width: fit-content;
   padding: 15px;
   font-weight: 600;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
 }
 
 header {
@@ -11502,8 +11507,9 @@ header .header_inner .header_settings {
 }
 
 .image {
-  width: 500px;
-  height: 350px;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
   border-radius: 10px;
 }
 
@@ -11540,4 +11546,9 @@ header .header_inner .header_settings {
 .about_col {
   max-width: 400px;
   width: 100%;
+}
+
+.profile .profile_inner h2, .profile .profile_inner .h2 {
+  text-align: center;
+  margin: 20px 0px;
 }

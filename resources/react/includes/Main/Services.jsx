@@ -12,8 +12,8 @@ const Services = () => {
 								Мы предлагаем вам 
 							</span>
 						</div>
-						<div className='services-top'>
-							<img className='image' src="https://images.unsplash.com/photo-1593642532744-d377ab507dc8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" alt="Photo" />
+						<div className='services-top d-flex flex-lg-wrap'>
+								<img className='image' src="https://images.unsplash.com/photo-1593642532744-d377ab507dc8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" alt="Photo" />
 							<div className="top-desc"> 
 								<h1>New Technologeis</h1>
 								<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit enim et eos vel debitis ex nulla culpa exercitationem consequuntur itaque repudiandae molestiae nihil, id minus? A sunt quibusdam delectus officia! Quae repudiandae iusto facere consequuntur vero sapiente vitae minima soluta aspernatur voluptatem eveniet, excepturi minus quis enim ipsum earum sequi natus voluptate. </p>
