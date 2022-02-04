@@ -5,9 +5,6 @@ import Cookies from 'js-cookie'
 import { useNavigate } from "react-router-dom";
 
 
-
-
-
 function Login({setCurrent}) {
 
   const navigate = useNavigate()

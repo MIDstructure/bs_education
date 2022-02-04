@@ -10,7 +10,7 @@
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:a4gsVChoXq9rxw1yaPE5scf2AF03wbXZZlhIyNUxsFI=',
+    'key' => 'base64:TYMK4+WXFEajzEgGt8HPeqM0++Jb+ucrADL30IyF2qw=',
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (
@@ -417,8 +417,9 @@
     array (
       0 => 'registration',
       1 => 'reset-passwords',
-      2 => 'update-profile-information',
-      3 => 'update-passwords',
+      2 => 'email-verification',
+      3 => 'update-profile-information',
+      4 => 'update-passwords',
     ),
   ),
   'hashing' => 

@@ -1,9 +1,6 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal'
 
-import "../../sass/_modal.scss"
-
-
 
 function Modall(props) {
 

@@ -10,3 +10,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::middleware('auth:sanctum')->get('/token', function (Request $request) { 
     return csrf_token(); 
 });
+
+Route::prefix( 'v1' )->group( function() 
+{
+    Route::get(     'user/get',              'UserController@getUser');  // Берем Юзера
+    Route::post(    'ads_post',              'AdsController@adsPost');  // Берем Юзера
+});
