@@ -28,7 +28,6 @@
 
 .top-desc{
   width: 500px;
-  height: 350px;
   margin-left: 30px;
 }
 
@@ -53,15 +52,14 @@
 }
 
 .sr-items{
-  width: 500px;
-  height: 100px;
+  max-width: 500px;
+  width: 100%;
   margin: 15px;
   display: flex;
-}
-
-.sr-img{
-  height: 100px;
-  width: 100px;
+  img {
+    max-width: 100px;
+    max-height: 100px;
+  }
 }
 
 .sr-desc{
@@ -72,4 +70,22 @@
   color: #484848;
   margin-bottom: 5px;
   font-size: 25px;
+}
+
+
+@media screen and (max-width: 990px ) {
+  .services-top {
+    flex-wrap: wrap;
+    .image {
+      margin-bottom: 15px;
+    }
+  }
+  .service {
+    &_inner {
+      .heading {
+        text-align: center;
+        margin-bottom: 15px;
+      }
+    }
+  }
 }

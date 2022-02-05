@@ -12,7 +12,7 @@ const Services = () => {
 								Мы предлагаем вам 
 							</span>
 						</div>
-						<div className='services-top d-flex flex-lg-wrap'>
+						<div className='services-top'>
 								<img className='image' src="https://images.unsplash.com/photo-1593642532744-d377ab507dc8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" alt="Photo" />
 							<div className="top-desc"> 
 								<h1>New Technologeis</h1>
