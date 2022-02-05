@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card'
 import Button from "react-bootstrap/Button";
 import { Row } from "react-bootstrap";
 import axios from "axios";
+import { AdsCard } from "../components";
 
 
 
@@ -49,23 +50,13 @@ const Dashboard = ({user}) => {
 }
 const MyAds = e => {
   return (
-    <Row xs={1} lg={3}>
+    <div className="row row-cols-1 row-cols-md-3 g-4 ">
       {Array(6).fill(1).map((e, index) => {
         return (
-          <Card key={index} className="col-sm my-2 mx-4" style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="https://wallpaperaccess.com/full/1285952.jpg" />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
-              </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
+          <AdsCard/>
         )
       })}
-    </Row>
+    </div>
   )
 }
 const Something = e => {

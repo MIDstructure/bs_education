@@ -1,4 +1,19 @@
 .about_col {
   max-width: 400px;
   width: 100%;
+  margin: 0 auto;
+}
+
+
+@media screen and (max-width: 990px ) {
+  .aboutus {
+    &_inner {
+      .heading {
+        text-align: center;
+      }
+      .aboutus_body {
+        flex-flow: column;
+      }
+    }
+  }
 }

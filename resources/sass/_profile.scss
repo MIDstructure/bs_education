@@ -1,12 +1,23 @@
 .profile {
   .profile_inner {
     // height: 100vh;
+    .sidebar {
+      width: 280px;
+    }
     h2 {
       text-align: center;
       margin: 20px 0px;
     }
-    .profile_content {
-      
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .profile {
+    &_inner {
+      flex-flow: column;
+      .sidebar {
+        min-width: 100%;
+      }
     }
   }
 }

@@ -70,3 +70,42 @@
   }
 }
 
+
+@media screen and (max-width: 1540px) {
+  .honey {
+    --s: 230px;
+    &_inner {
+      .comb {
+        
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .honey {
+    --s: 173px;
+    &_inner {
+      .honey_combs {
+        padding: 0px 15px;
+      }
+      .comb {
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .honey {
+    padding-bottom: 300px;
+    &_inner {
+      .honey_combs {
+        padding: -1px 24px;
+      }
+    }
+  }
+}

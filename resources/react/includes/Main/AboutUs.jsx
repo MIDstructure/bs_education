@@ -14,7 +14,7 @@ function AboutUs() {
               Узнайте больше про нашу деятельность
             </span>
           </div>
-          <div className="d-flex justify-content-between flex-wrap mt-5">
+          <div className="aboutus_body d-flex justify-content-between mt-5">
             <div className="text-center px-3 about_col">
               <img src="https://avatars.mds.yandex.net/i?id=05acb15e1f6705b1ece3f3812e629869-5280865-images-thumbs&n=13" alt="" width="100px" height="100px" />
               <article className="my-3 fs-2 text-bold">
