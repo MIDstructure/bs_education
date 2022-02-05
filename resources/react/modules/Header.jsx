@@ -16,23 +16,24 @@ function Header() {
       <nav className="navbar navbar-expand-lg navbar-light bg-light py-4">
         <div className="container d-flex justify-content-between">
           <Link to="/" className="display-6">BS-Education</Link>
+          <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link to="/all-ads" className="nav-link active" aria-current="page" href="#">Все курсы</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/" className="nav-link active">Техподдержка</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/" className="nav-link active" role="button"  aria-expanded="false">
+                  О нас
+                </Link>
+              </li>
+            </ul>
+          </div>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
           </button>
-          {/* <div className="collapse navbar-collapse" id="navbarSupportedContent"> */}
-          <ul className="navbar-nav mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link to="/all-ads" className="nav-link active" aria-current="page" href="#">Все курсы</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/" className="nav-link">Техподдержка</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/" className="nav-link" role="button"  aria-expanded="false">
-                О нас
-              </Link>
-            </li>
-          </ul>
           {Cookies.get('logged_in')
             ? 
               <ul className="navbar-nav">
@@ -57,7 +58,6 @@ function Header() {
             </button>
           }
     
-          {/* </div> */}
         </div>
       </nav>
       <Modall open={modal}  close={setModal}>

@@ -5,13 +5,13 @@ import { AdsCard } from "../components";
 function AllAds() {
   return (
     <Container>
-      <Row xs={1} lg={3}>
+      <div className="row row-cols-1 row-cols-md-3 g-4 my-4">
         {Array(6).fill(123).map((obj,index)=>{
           return(
             <AdsCard key={index} />
           )
         })}
-      </Row>
+      </div>
     </Container>
   )
 }
