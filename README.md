@@ -16,7 +16,7 @@
 <h3>v1.0 arm</h3>
 <p> npm i bootstrap react-bootstrap bootstrap-icons
 <br> npm i mobx mobx-react-lite yup // установка state manager mobx 
-<br> Добавлен роутинг и некоторые компоненты в приложение
+<br> Добавлен роутинг и некоторые компоненты в приложение!!
 </p>
 
 
